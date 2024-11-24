@@ -2,8 +2,8 @@ classdef OneDofPlanarRobot
     %OneDofPlanarRobot regarding all methods related to the 1-DoF planar robot
     
     properties (Access=private)
-        % The length of the robot
-        l1 = 2
+        % The length of the robot, in meters
+        l1
     end
     
     methods
@@ -46,7 +46,7 @@ classdef OneDofPlanarRobot
         end
         
         function Jt = translation_jacobian(obj,theta1)
-            % Calculate the translation Jacobian of the 1-DoF planar
+            % Calculates the translation Jacobian of the 1-DoF planar
             % robot.
             
             % Include the namespace inside the function
